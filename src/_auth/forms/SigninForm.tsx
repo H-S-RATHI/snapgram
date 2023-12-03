@@ -19,7 +19,7 @@ const SigninForm = () => {
   const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
 
   // Query
-  const { mutateAsync: signInAccount} = useSignInAccount();
+  const { mutateAsync: signInAccount } = useSignInAccount();
 
   const form = useForm<z.infer<typeof SigninValidation>>({
     resolver: zodResolver(SigninValidation),
@@ -34,7 +34,7 @@ const SigninForm = () => {
 
     if (!session) {
       toast({ title: "Login failed. Please try again." });
-      
+
       return;
     }
 
@@ -46,7 +46,7 @@ const SigninForm = () => {
       navigate("/");
     } else {
       toast({ title: "Login failed. Please try again.", });
-      
+
       return;
     }
   };

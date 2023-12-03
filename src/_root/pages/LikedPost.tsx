@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
 
 const LikedPost = () => {
-  return (
-    <div>LikedPost</div>
-  )
-}
+  return
+  <div>LikedPost</div>;
+};
 
-export default LikedPost
+export default LikedPost;
